@@ -56,7 +56,8 @@ nav a {
   outline: none;
   transition: all 0.5s ease;
 }
-nav a.active, nav a:hover {
+nav a.active,
+nav a a:hover {
   color: red;
 }
 nav .menu-btn i {

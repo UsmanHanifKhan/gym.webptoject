@@ -69,12 +69,10 @@ nav {
     letter-spacing: 1px;
     outline: none;
     transition: all .5s ease;
-
     &.active,
-    &:hover {
-      color: $text-color;
-
-    }
+ a:hover{
+  color: $text-color;
+ }
   }
 
   .menu-btn i {
@@ -130,7 +128,7 @@ input[type="checkbox"] {
   }
 }
 
-button {
+ button {
   margin-top: 1rem;
   padding: 1rem 2rem;
   background: red;
@@ -142,6 +140,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: 1s;
+
 
   &:hover {
     transform: scale(1.1);
