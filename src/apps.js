@@ -2,36 +2,38 @@ const express = require('express')
 const app = express()
 const port = 8000
 const path = require('path')
-const hbs = require('hbs')
+const contact = require('./models/contact')
+require("./db/conn")
+const eMail = require("./models/contact")
+
+// console.log(path.join(__dirname,"/db/conn.js"))
 
 const staticPath = path.join(__dirname,"../templates/public")
 const templatePath = path.join(__dirname,"../templates/views")
-const partialsPath = path.join(__dirname,"../templates/partials")
+
 app.set("view engine","hbs")
 app.set("views",templatePath)
 
-hbs.registerPartials(partialsPath)
 app.use(express.static(staticPath ))
-
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
 app.get('/',(req,res)=>{
     res.render("index")
 })
 
-app.get('/about',(req,res)=>{
-    res.render("about")
-})
+app.post("/",async(req,res)=>{
+    try {
+        const register = new contact({
+            email: req.body.mail
+        })
+        const registered = await register.save()
+        res.status(201).render("index")
 
-app.get('/features',(req,res)=>{
-    res.render("features")
+    } catch (error) {
+        res.status(400).send(error)
+        console.log(error);
+    }
 })
-app.get('/price',(req,res)=>{
-    res.render("price")
-})
-app.get('/trainer',(req,res)=>{
-    res.render("trainer")
-})
-
-
 
 app.get('*',(req,res)=>{
     res.render("404")

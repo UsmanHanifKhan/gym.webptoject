@@ -56,9 +56,8 @@ nav a {
   outline: none;
   transition: all 0.5s ease;
 }
-nav a.active,
-nav a a:hover {
-  color: red;
+nav a:hover {
+  background: red;
 }
 nav .menu-btn i {
   color: #fff;
@@ -126,7 +125,7 @@ button:hover {
     padding: 0 40px 0 50px;
   }
   nav ul li a {
-    color: red;
+    color: #fff;
   }
 }
 @media (max-width: 920px) {

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="Shortcut Icon" href="./img/befit1.png" sizes="64x64" >
+    <link rel="Shortcut Icon" href="./img/befit1.png" sizes="64x64">
 
     <link rel="shortcut icon" type="image/jpg" href="img/img.jpg/favicon.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
@@ -26,7 +26,24 @@
 
 <body>
     {{!-- Navbar Header form header.hbs file --}}
-    {{>header}}
+    {{!-- {{>header}} --}}
+        <nav>
+    <div class="logo">BE <span style="color: #fff;">FIT</span> </div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars" style="color: #000;"></i>
+    </label>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#price">Pricing</a></li>
+      <li><a href="#trainer">Trainers</a></li>
+      <li><a href="#end">Contact Us</a></li>
+      <!--<li><i class="fa fa-search"></i></li>
+           <li><i class="fa fa-user"></i></li>             
+           <li><i class="fa fa-shopping-cart"></i></li> -->
+    </ul>
+  </nav>
     {{!-- Set background --}}
     <div class="container-1">
         <div class="content">
@@ -38,7 +55,7 @@
         </div>
     </div>
 
-    <section class="about-page">
+    <section class="about-page" id="about">
         <div class="box-img">
             <img src="./img/about.webp" alt="">
         </div>
@@ -69,7 +86,7 @@
         </div>
     </section>
 
- <section class="price">
+    <section class="price" id="price">
         <div class="price-row">
             <div class="price-col">
                 <span>Pricing Plan</span>
@@ -117,8 +134,8 @@
 
         </div>
     </section>
-    
-    <section class="expert">
+
+    <section class="expert" id="trainer">
         <h1 class="title-features"><span>Expert Trainers</span></h1>
 
         <div class="expert-row">
@@ -284,7 +301,63 @@
     </section>
 
 
-{{>footer}}
+    {{!-- {{>footer}} --}}
+   
+    <section class="end" id="end">
+        <div class="end-row container">
+            <div class="end-col">
+                <h1>quick links</h1>
+                <p>home</p>
+                <p>about</p>
+                <p>features</p>
+                <p>Pricing</p>
+                <p>Trainers</p>
+                <p>blogs</p>
+            </div>
+
+            <div class="end-col">
+                <h1>opening hours</h1>
+                <p>monday: <span>7:00am - 10:30pm</span> </p>
+                <p>tuesday: <span>7:00am - 10:30pm</span> </p>
+                <p>wednesday: <span>7:00am - 10:30pm</span> </p>
+                <p>friday: <span>Closed</span> </p>
+                <p>saturday: <span>7:00am - 10:30pm</span> </p>
+                <p>sunday:<span>7:00am - 10:30pm</span> </p>
+            </div>
+
+            <div class="end-col">
+                <h1>Contact</h1>
+                <p><i class="fa-solid fa-phone"></i> +92 304-3763110</p>
+                <p><i class="fa-solid fa-phone"></i> +111-222-3333</p>
+                <p><i class="fa-solid fa-folder"></i> usmanh3321@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Punjab, Sadiqabad-22451</p>
+                <div class="social-contact">
+                   <i class="fa-brands fa-facebook"></i>
+                   <i class="fa-brands fa-twitter"></i>
+                   <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="end-col" >
+                <h1>newsletter</h1>
+                <p>subscribe for latest updates</p>
+                <form action="/" method="post" >
+                <input type="text" placeholder="enter your email" name="mail">
+                <br>
+                <button>Subscribe</button>
+                </form>
+                {{!-- <form method="post" name="/addname">
+        <input id="pickName" type='text' name='pickName' placeholder='Nickname' required>
+        <input id='ready' value=" Ready >" type='submit'>
+    </form> --}}
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>created by <span>usman khan</span> | all rights reserved</p>
+    </footer>
 
 
 

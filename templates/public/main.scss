@@ -37,12 +37,11 @@ $text-color: red;
 
 nav {
   @include flexprob();
-  height: 4rem +1rem;
+  height: 5rem;
   background: #000;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px 0 100px;
-
   .logo {
     color: $text-color;
     font-size: 18px;
@@ -69,9 +68,9 @@ nav {
     letter-spacing: 1px;
     outline: none;
     transition: all .5s ease;
-    &.active,
- a:hover{
-  color: $text-color;
+    
+ &:hover{
+  background: red;
  }
   }
 
@@ -81,7 +80,6 @@ nav {
     cursor: pointer;
     display: none;
   }
-
 
 }
 
@@ -153,7 +151,7 @@ input[type="checkbox"] {
 
 
     ul li a {
-      color: $text-color;
+      color: $color;
     }
   }
 
